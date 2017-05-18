@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//functions
 
 int attack(int yourChoice)//first choice 1 in story
 {
@@ -31,14 +32,15 @@ int attack(int yourChoice)//first choice 1 in story
 	if (yourChoice == 3)
 	{
 		cout << "\n\n You used an item. ";
-		cout << "\n\n You choose to use an item. ";
+		cout << "\n\n You choose to use an item.";
 	}
+	
 	return r;
 }
 
 
 
-int defend(int yourChoice)
+int defend(int yourChoice)//Second choice in the story
 {
 	cout << "You defended yourself. Your opponent defended. No health was damaged.";
 	cout << "What is your next move? 1- Attack, 2- Defend, 3- Item?";
@@ -47,9 +49,25 @@ int defend(int yourChoice)
 
 
 
-int item(int yourChoice)
+int item(int yourChoice)//Third choice in the story
 {
 	cout << "You used an item, ";
+}
+int randomNumberHp()
+{
+	int hp = 0;
+	int r = (rand() % 10) + 1;
+
+}
+int randomNumberEnemy()
+{
+	int hp = 0;
+	int t = (rand() % 10) + 1;
+}
+int randomNumberDamage()
+{
+	int hp = 0;
+	int e = (rand() % 30) + 1;
 }
 int main()
 {
@@ -85,3 +103,6 @@ int main()
 
 
 }
+
+
+
