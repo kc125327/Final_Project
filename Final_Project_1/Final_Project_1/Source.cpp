@@ -53,6 +53,22 @@ int item(int yourChoice)//Third choice in the story
 {
 	cout << "You used an item, ";
 }
+int randomNumberHp()
+{
+	int hp = 0;
+	int r = (rand() % 10) + 1;
+
+}
+int randomNumberEnemy()
+{
+	int hp = 0;
+	int t = (rand() % 10) + 1;
+}
+int randomNumberDamage()
+{
+	int hp = 0;
+	int e = (rand() % 30) + 1;
+}
 int main()
 {
 
@@ -90,19 +106,3 @@ int main()
 
 
 
-int randomNumberHp()
-{
-	int hp = 0;
-	int r = (rand() % 10) + 1;
-
-}
-int randomNumberEnemy()
-{
-	int hp = 0;
-	int t = (rand() % 10) + 1;
-}
-int randomNumberDamage()
-{
-	int hp = 0;
-	int e = (rand() % 30) + 1;
-}
