@@ -7,6 +7,7 @@
 using namespace std;
 
 //functions
+
 int attack(int yourChoice)//first choice 1 in story
 {
 	int r;
@@ -20,45 +21,6 @@ int attack(int yourChoice)//first choice 1 in story
 		cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
 		cin >> yourChoice;
 	}
-			if (yourChoice == 1)
-			{
-				cout << "\n\n You attacked your opponent.";
-				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-				cin >> yourChoice;
-			}
-					if (yourChoice == 1)
-						{
-							cout << "\n\n You attacked your opponent.";
-							cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-							cin >> yourChoice;
-						}
-					if (yourChoice == 2)
-					{
-						cout << "\n\n You defended yourself. ";
-						cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-						cin >> yourChoice;
-					}
-					if (yourChoice == 3)
-					{
-						cout << "You choose to use an Item.";
-						cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-						cin >> yourChoice;
-					}
-			if (yourChoice == 2)
-			{
-				cout << "\n\n You defended yourself. ";
-				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-				cin >> yourChoice;
-			}
-
-
-
-			if (yourChoice == 3)
-			{
-				cout << "You choose to use an Item.";
-				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
-				cin >> yourChoice;
-			}
 
 	if (yourChoice == 2)
 	{
@@ -72,6 +34,7 @@ int attack(int yourChoice)//first choice 1 in story
 		cout << "\n\n You used an item. ";
 		cout << "\n\n You choose to use an item.";
 	}
+	
 	return r;
 }
 
@@ -123,4 +86,23 @@ int main()
 
 
 
+}
+
+
+
+int randomNumberHp()
+{
+	int hp = 0;
+	int r = (rand() % 10) + 1;
+
+}
+int randomNumberEnemy()
+{
+	int hp = 0;
+	int t = (rand() % 10) + 1;
+}
+int randomNumberDamage()
+{
+	int hp = 0;
+	int e = (rand() % 30) + 1;
 }
