@@ -6,7 +6,7 @@
 
 using namespace std;
 
-
+//functions
 int attack(int yourChoice)//first choice 1 in story
 {
 	int r;
@@ -20,6 +20,45 @@ int attack(int yourChoice)//first choice 1 in story
 		cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
 		cin >> yourChoice;
 	}
+			if (yourChoice == 1)
+			{
+				cout << "\n\n You attacked your opponent.";
+				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+				cin >> yourChoice;
+			}
+					if (yourChoice == 1)
+						{
+							cout << "\n\n You attacked your opponent.";
+							cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+							cin >> yourChoice;
+						}
+					if (yourChoice == 2)
+					{
+						cout << "\n\n You defended yourself. ";
+						cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+						cin >> yourChoice;
+					}
+					if (yourChoice == 3)
+					{
+						cout << "You choose to use an Item.";
+						cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+						cin >> yourChoice;
+					}
+			if (yourChoice == 2)
+			{
+				cout << "\n\n You defended yourself. ";
+				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+				cin >> yourChoice;
+			}
+
+
+
+			if (yourChoice == 3)
+			{
+				cout << "You choose to use an Item.";
+				cout << "\n\n What is your next move? 1- Attack, 2- Defend, 3- Item?";
+				cin >> yourChoice;
+			}
 
 	if (yourChoice == 2)
 	{
@@ -31,14 +70,14 @@ int attack(int yourChoice)//first choice 1 in story
 	if (yourChoice == 3)
 	{
 		cout << "\n\n You used an item. ";
-		cout << "\n\n You choose to use an item. ";
+		cout << "\n\n You choose to use an item.";
 	}
 	return r;
 }
 
 
 
-int defend(int yourChoice)
+int defend(int yourChoice)//Second choice in the story
 {
 	cout << "You defended yourself. Your opponent defended. No health was damaged.";
 	cout << "What is your next move? 1- Attack, 2- Defend, 3- Item?";
@@ -47,7 +86,7 @@ int defend(int yourChoice)
 
 
 
-int item(int yourChoice)
+int item(int yourChoice)//Third choice in the story
 {
 	cout << "You used an item, ";
 }
