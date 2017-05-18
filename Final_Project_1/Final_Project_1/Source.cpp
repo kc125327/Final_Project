@@ -34,6 +34,7 @@ int attack(int yourChoice)//first choice 1 in story
 		cout << "\n\n You used an item. ";
 		cout << "\n\n You choose to use an item.";
 	}
+	
 	return r;
 }
 
@@ -89,8 +90,19 @@ int main()
 
 
 
-int random()
+int randomNumberHp()
 {
-	int number;
-	int 
+	int hp = 0;
+	int r = (rand() % 10) + 1;
+
+}
+int randomNumberEnemy()
+{
+	int hp = 0;
+	int t = (rand() % 10) + 1;
+}
+int randomNumberDamage()
+{
+	int hp = 0;
+	int e = (rand() % 30) + 1;
 }
