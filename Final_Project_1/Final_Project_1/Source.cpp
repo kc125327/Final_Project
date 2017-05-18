@@ -91,5 +91,6 @@ int main()
 
 int random()
 {
-
+	int number;
+	int 
 }
