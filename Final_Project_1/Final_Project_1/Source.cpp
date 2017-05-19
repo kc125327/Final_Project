@@ -27,17 +27,25 @@ int attack(int yourChoice)//first choice 1 in story
 		main();
 		if (randomNumberMonster() == 1)
 		{
-		//your health is affected by the full monster attack
+			cout << "Your health is affected by the full monster attack";
+			yourHP = randomNumberDamage() + yourHP;
+			cout << "Your remaning health is " << yourHP;
+
 
 		}
 		if (randomNumberMonster() == 2)
 		{
 			// monster defends complete monster defends equation 
+			cout << "The monster defended, you attack as the monster defends.";
+			monsterHP = monsterHP + randomNumberDamage() / 4;
 		}
 
 		if (randomNumberMonster() == 3)
 		{
 		//you attacked while monster was healing complete the following equation for damage
+			cout << "You attacked while the monster was healing.";
+			monsterHP = randomNumberDamage() + monsterHP;
+			cout << "The remaining hit points on the monster is " << monsterHP;
 		}
 	}
 
@@ -52,11 +60,20 @@ int attack(int yourChoice)//first choice 1 in story
 	{
 		cout << "\n\n You used an item. This is how much you healed  " << randomNumberHp();
 		yourHP = randomNumberHp() + yourHP;
-		cout << "The your remaining health is " << yourHP;		
+		cout << "Your remaining health is " << yourHP;		
+	}
+	if (yourHP == 0)
+	{
+		cout << "Game Over! You lose. ";
+	}
+	if (monsterHP == 0)
+	{
+		cout << "Victory! You won.";
 	}
 	
 	return r;
 }
+
 int defend(int yourChoice)//Second choice in the story
 {
 	cout << "You defended yourself. Your opponent defended. No health was damaged.";
@@ -75,16 +92,19 @@ int randomNumberHp()
 	int r = (rand() % 10) + 1;
 
 }
+
 int randomNumberEnemy()
 {
 	int hp = 0;
 	int t = (rand() % 10) + 1;
 }
+
 int randomNumberDamage()
 {
 	int hp = 0;
 	int e = (rand() % 30) + 1;
 }
+
 int randomNumberMonster()//Monsters choice
 {
 	int e = 0;
@@ -118,7 +138,8 @@ int main()
 		cout << "Would you like to go again? <<<";
 		++countTotalRounds;
 		cin >> chooseAgain;
-	}while(chooseAgain == "Yes");
+	}
+	while(chooseAgain == "Yes");
 	cout << "You did " << countTotalRounds << "rounds.";
 
 
