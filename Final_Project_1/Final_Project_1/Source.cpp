@@ -3,6 +3,8 @@
 
 #include<iostream>
 #include<string>
+#include <windows.h>
+#include <mmsystem.h>
 
 using namespace std;
 int monsterHP = 100;
@@ -12,27 +14,28 @@ void yourChoice1()
 {
 	int randomNumberDamage = (rand() % 30) + 1;
 	int randomNumberMonster = (rand() % 3) + 1;
-	cout << "You did this amount of damage " << randomNumberDamage << endl;
+	int randomHeal = (rand() % 25) + 1;
+	cout << "You dealt " << randomNumberDamage << " damage" << endl;
 	monsterHP = monsterHP - randomNumberDamage;
-	cout << "The remaining hit points on monster is " << monsterHP << endl;
+	cout << "Enemy Hp- " << monsterHP << endl;
 	if (randomNumberMonster == 1)
 	{
-		cout << "Your health is affected by the full monster attack" << endl;
-		yourHP = randomNumberDamage + yourHP;
-		cout << "Your remaining health is " << yourHP << endl;
+		cout << "The enemy strikes a blow! " << endl;
+		yourHP = yourHP - randomNumberDamage;
+		cout << "Remaining Hp: " << yourHP << endl;
 	}
 	if (randomNumberMonster == 2)
 	{
 		// monster defends complete monster defends equation 
-		cout << "The monster defended, you attack as the monster defends." << endl;
-		monsterHP = monsterHP + randomNumberDamage / 4;
+		cout << "The monster tried to defend! Time to use an extra turn! " << endl;
+		monsterHP = monsterHP - randomNumberDamage / 4;
 	}
 	if (randomNumberMonster == 3)
 	{
 		//you attacked while monster was healing complete the following equation for damage
-		cout << "You attacked while the monster was healing." << endl;
-		monsterHP = randomNumberDamage + monsterHP;
-		cout << "The remaining hit points on the monster is " << monsterHP << endl;
+		cout << "The enemy's  healing?" << endl;
+		monsterHP = monsterHP + randomHeal;
+		cout << "Enemy Hp: " << monsterHP << endl;
 	}
 }
 
@@ -41,27 +44,28 @@ void yourChoice2()
 {
 	int randomNumberDamage = (rand() % 30) + 1;
 	int randomNumberMonster = (rand() % 3) + 1;
-	cout << "You defended. The damage from the monster is  " << randomNumberDamage << endl;
+	int randomHeal = (rand() % 25) + 1;
+	cout << "DEFENSE MODE ACTIVATED! Your puny weapon will do nothing to me! " << randomNumberDamage << endl;
 	yourHP = yourHP - randomNumberDamage / 4;
-	cout << "The remaining hit points on you is " << yourHP << endl;
+	cout << "Remaining Hp- " << yourHP << endl;
 	if (randomNumberMonster == 1)
 	{
-		cout << "Your health is affected by the full monster attack" << endl;
-		yourHP = randomNumberDamage - yourHP;
-		cout << "Your remaining health is " << yourHP << endl;
+		cout << "The enemy strikes a blow! " << endl;
+		yourHP = yourHP - randomNumberDamage;
+		cout << "Remaining Hp: " << yourHP << endl;
 	}
 	if (randomNumberMonster == 2)
 	{
 		// monster defends complete monster defends equation 
-		cout << "The monster defended, you attack as the monster defends." << endl;
-		monsterHP = monsterHP + randomNumberDamage / 4;
+		cout << "The monster tried to defend! Time to use an extra turn! " << endl;
+		monsterHP = monsterHP - randomNumberDamage / 4;
 	}
 	if (randomNumberMonster == 3)
 	{
 		//you attacked while monster was healing complete the following equation for damage
-		cout << "You attacked while the monster was healing." << endl;
-		monsterHP = randomNumberDamage + monsterHP;
-		cout << "The remaining hit points on the monster is " << monsterHP << endl;
+		cout << "The enemy's healing?" << endl;
+		monsterHP = monsterHP + randomHeal;
+		cout << "Enemy Hp: " << monsterHP << endl;
 	}
 }
 
@@ -70,36 +74,37 @@ void yourChoice3()
 {
 	int randomNumberDamage = (rand() % 30) + 1;
 	int randomNumberMonster = (rand() % 3) + 1;
-	int randomNumberHP = (rand() % 10) + 1;
+	int randomHeal = (rand() % 25) + 1;
 	//Change this to item. and add other info
-	cout << "You went for an item.";
-	yourHP = yourHP + randomNumberHP;
-	cout << "The remaining hit points on you is " << yourHP << endl;
+	cout << "Time for a gold ol' estus flask. (Heal) ";
+	yourHP = yourHP + randomHeal;
+	cout << "You Hp was restored to- " << yourHP << endl;
 	
 	if (randomNumberMonster == 1)
 	{
-		cout << "Your health is affected by the full monster attack" << endl;
-		yourHP = randomNumberDamage - yourHP;
-		cout << "Your remaining health is " << yourHP << endl;
+		cout << "The enemy strikes a blow! " << endl;
+		yourHP = yourHP - randomNumberDamage;
+		cout << "Remaining Hp: " << yourHP << endl;
 	}
 	if (randomNumberMonster == 2)
 	{
 		// monster defends complete monster defends equation 
-		cout << "The monster defended, you attack as the monster defends." << endl;
-		monsterHP = monsterHP + randomNumberDamage / 4;
+		cout << "The monster tried to defend! Time to use an extra turn! " << endl;
+		monsterHP = monsterHP - randomNumberDamage / 4;
 	}
 	if (randomNumberMonster == 3)
 	{
 		//you attacked while monster was healing complete the following equation for damage
-		cout << "You attacked while the monster was healing." << endl;
-		monsterHP = randomNumberDamage + monsterHP;
-		cout << "The remaining hit points on the monster is " << monsterHP << endl;
+		cout << "The enemy's healing!" << endl;
+		monsterHP = monsterHP + randomHeal;
+		cout << "Enemy Hp: " << monsterHP << endl;
 	}
 }
 
+
 int main()
 {
-
+	
 	string chooseAgain;
 	int yourChoice;
 	int countTotalRounds = 0;
@@ -123,11 +128,11 @@ int main()
 				}
 			
 				
-			cout << "Would you like to go again? <<<" << endl;
+			cout << "If you would you like to go again press 4.  <<<" << endl;
 			++countTotalRounds;
 			cin >> chooseAgain;
 		
-	} while (chooseAgain == "Yes" || monsterHP == 0 || yourHP == 0);
+	} while (chooseAgain == "4" || monsterHP == 0 || yourHP == 0);
 	//ending
 	if (yourHP == 0)
 	{
@@ -138,5 +143,5 @@ int main()
 		cout << "Victory" << endl;
 	}
 
-			cout << "You did " << countTotalRounds << "rounds.";
+			cout << "Match time: " << countTotalRounds << "rounds.";
 	}
