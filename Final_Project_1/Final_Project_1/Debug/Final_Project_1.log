@@ -1,13 +1,13 @@
-﻿Build started 5/22/2017 10:30:54 AM.
-     1>Project "C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Final_Project_1\Final_Project_1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 5/25/2017 10:13:54 AM.
+     1>Project "C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Final_Project_1\Final_Project_1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Debug\Final_Project_1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Debug\Final_Project_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Debug\Final_Project_1.lib" /MACHINE:X86 Debug\Source.obj
-         Final_Project_1.vcxproj -> C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Debug\Final_Project_1.exe
-     1>Done Building Project "C:\Users\kc125327\Desktop\Final\Final_Project\Final_Project_1\Final_Project_1\Final_Project_1.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Debug\Final_Project_1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Debug\Final_Project_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Debug\Final_Project_1.lib" /MACHINE:X86 Debug\Source.obj
+         Final_Project_1.vcxproj -> C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Debug\Final_Project_1.exe
+     1>Done Building Project "C:\Users\td137139\Desktop\Final_Project\Final_Project_1\Final_Project_1\Final_Project_1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.84
+Time Elapsed 00:00:03.80
